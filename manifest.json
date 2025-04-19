@@ -1,0 +1,23 @@
+{
+  "name": "FocusMode UI",
+  "description": "Simplify busy websites into distraction free spaces.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "cover.png",
+      "32": "cover.png",
+      "48": "cover.png",
+      "128": "cover.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["popup.js"]
+    }
+  ],
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["<all_urls>"]
+}
